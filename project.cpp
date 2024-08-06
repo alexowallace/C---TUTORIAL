@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 // class derived: visibility-mode base1 , visibility-mode base2
@@ -13,12 +14,12 @@ protected:
     int b;
 
 public:
-    void get_data()
+    void get_datasimple()
     {
         cout << "enter 2 number" << endl;
         cin >> a >> b;
     }
-    void show()
+    void showsimple()
     {
         cout << "sum is " << a + b << endl;
         cout << "minus  is " << a - b << endl;
@@ -26,34 +27,44 @@ public:
         cout << "divide is " << a / b << endl;
     }
 };
-// class hybrid
-// {
-// protected:
-//     int base2int;
+class scien
+{
+protected:
+    int a;
+    int b;
 
-// public:
-//     void set_base2int(int a)
-//     {
-//         base2int = a;
-//     }
-// };
+public:
+    void get_datascien()
+    {
+        cout << "enter 2 number" << endl;
+        cin >> a >> b;
+    }
+    void showscien()
+    {
+        cout << "cos is " << cos(a) << endl;
+        cout << "sin  is " << sin(a) << endl;
+        cout << "tan  is " << tan(a) << endl;
+        cout << "exp is " << exp(a) << endl;
+    }
+};
 
-// class derived : public base1, public base2
-// {
-// public:
-//     void show()
-//     {
-//         cout << "value of base1 is " << base1int << endl;
-//         cout << "value of base2 is " << base2int << endl;
-//         cout << "value of base1 + base2 is " << base1int + base2int << endl;
-//     }
-// };
+class hybrid : public simple, public scien
+{
+};
 
 int main()
 {
-    simple num;
-    num.get_data();
-    num.show();
+    // simple num;
+    // scien sci;
+    // num.get_data();
+    // num.show();
+    // sci.get_data();
+    // sci.show();
 
+    hybrid calc;
+    calc.get_datasimple();
+    calc.showsimple();
+    calc.get_datascien();
+    calc.showscien();
     return 0;
 };
