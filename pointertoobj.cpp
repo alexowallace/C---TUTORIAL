@@ -20,11 +20,16 @@ public:
 };
 int main()
 {
-    complex c1;
-    complex *ptr = &c1;
+    // complex c1;
+    // complex *ptr = &c1;
 
-    (*ptr).setdata(1, 7);
-    (*ptr).getdata();
+
+    // ptr->setdata(2,4);
+    // (*ptr).getdata();
+
+    complex *ptr = new complex;
+    ptr->setdata(3,4);
+    ptr->getdata();
 
     return 0;
 };
