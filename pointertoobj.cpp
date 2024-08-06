@@ -27,7 +27,10 @@ int main()
     // ptr->setdata(2,4);
     // (*ptr).getdata();
 
-    complex *ptr = new complex;
+    // complex *ptr = new complex;
+    // ptr->setdata(3,4);
+    // ptr->getdata();
+    complex *ptr = new complex[4];
     ptr->setdata(3,4);
     ptr->getdata();
 
