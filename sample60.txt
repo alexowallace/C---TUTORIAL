@@ -1,1 +1,2 @@
-writing on sample 60.txt 
+this is me 
+ this is me practicing c++ 
